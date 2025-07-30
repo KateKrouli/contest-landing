@@ -1,0 +1,50 @@
+.games {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    &__title {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 125%;
+        letter-spacing: -0.04em;
+        color: var(--semantic-neutral-0);
+    }
+
+    &__list {
+        display: flex;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    &__item {
+        width: calc(100% /6 - 10px);
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    &__image {
+        height: 99px;
+        background-size: cover;
+        background-position: center;
+    } 
+
+    &__name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 34px;
+        background: var(--semantic-brand-800);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        color: var(--semantic-neutral-100);
+    }
+    
+    &__tab img {
+        border-radius: 12px;
+    }
+}

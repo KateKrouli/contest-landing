@@ -22,7 +22,6 @@
         right: 0;
         background-image: url(images/main-banner.jpg);
         background-position: center;
-        background-size: cover;
         z-index: 0;
         border-radius: 12px;
     }
@@ -108,6 +107,7 @@
         font-size: 18px;
         line-height: 156%;
         color: var(--semantic-neutral-800);
+        cursor: pointer;
 
         &__title {
             display: flex;
