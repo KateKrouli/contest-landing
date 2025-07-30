@@ -5,24 +5,43 @@
     padding-top: 80px;
     padding-bottom: 80px;
 
+    @media (max-width: 767px) { 
+        gap: 20px;
+        padding-bottom: 60px;
+    }
+
     &__title {
         font-weight: 500;
         font-size: 48px;
         line-height: 125%;
         letter-spacing: -0.04em;
         color: var(--semantic-neutral-0);
+
+        @media (max-width: 767px) { 
+            font-size: 30px;
+            line-height: 127%;
+        }
     }
 
     &__list {
         display: flex;
         align-items: stretch;
         gap: 16px;
+
+        @media (max-width: 767px) { 
+            flex-wrap: wrap;
+            gap: 8px;
+        }
     }
 
     &__item {
         width: calc(100% /6 - 10px);
         border-radius: 12px;
         overflow: hidden;
+
+        @media (max-width: 767px) { 
+            width: calc(100% / 2 - 4px);
+        }
     }
 
     &__image {

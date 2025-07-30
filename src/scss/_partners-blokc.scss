@@ -1,6 +1,10 @@
 .partners-block {
     padding-top: 140px;
 
+    @media (max-width: 767px) { 
+        padding-top: 60px;
+    }
+
     &__title {
         font-weight: 500;
         font-size: 48px;
@@ -8,6 +12,13 @@
         letter-spacing: -0.04em;
         color: var(--semantic-neutral-0); 
         margin-bottom: 40px;
+
+        @media (max-width: 767px) { 
+            font-size: 30px;
+            line-height: 127%;
+            margin-bottom: 8px;
+        }
+
     }
 
     &__container {
@@ -27,6 +38,13 @@
             border-radius: 12px;
             padding: 32px;
             background: var(--semantic-brand-900);
+
+
+            @media (max-width: 767px) { 
+                width: 60px !important;
+                height: 60px;
+                padding: 8px;
+            }
         }
     }
 }

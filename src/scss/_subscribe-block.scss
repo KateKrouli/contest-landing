@@ -7,13 +7,29 @@
     position: relative;
     overflow: hidden;
 
+    @media (max-width: 767px) { 
+        width: calc(100% - 16px);
+        margin: 0 auto;
+        flex-direction: column;
+        padding: 16px;
+        gap: 24px;
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 24px;
-        width: 50%;
+        width: 50%; 
         max-width: 510px; 
+
+        @media (max-width: 767px) { 
+            width: 100%;
+            max-width: 100%; 
+            align-items: stretch;
+            gap: 12px;
+ 
+        }
     }
 
     &__title {
@@ -22,6 +38,11 @@
         line-height: 122%;
         letter-spacing: -0.06em;
         color: var(--semantic-neutral-0);
+
+        @media (max-width: 767px) { 
+            font-size: 30px;
+            line-height: 127%;
+        }
     }
 
     &__text {
@@ -34,5 +55,12 @@
         position: absolute;
         top: -10px;
         right: 7%;
+
+        @media (max-width: 767px) { 
+            position: relative;
+            margin: 0 auto;
+            top: auto;
+            right: auto;
+        } 
     }
 }

@@ -28,6 +28,10 @@ body {
   margin: 0;
   overflow-x: hidden;
   background: var(--semantic-brand-900);
+
+  @media (max-width: 767px) { 
+    padding-top: 64px;
+  }
 }
 
 a {
@@ -75,6 +79,10 @@ p {
   max-width: 1248px;
   padding: 0 16px;
   margin: 0 auto;
+
+  @media (max-width: 767px) { 
+    padding: 0 8px;
+  }
 } 
 
 .h2 {
