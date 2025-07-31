@@ -1,47 +1,56 @@
 <div class="games main-width">
   <div class="games__title">Игра начинается — выбери свой способ выиграть!</div>
-  <div class="games__list">
-    <div class="games__item">
-      <div
-        class="games__image"
-        style="background-image: url('images/game-example.jpg')"
-      ></div>
-      <div class="games__name">Game</div>
-    </div>
-    <div class="games__item">
-      <div
-        class="games__image"
-        style="background-image: url('images/game-example.jpg')"
-      ></div>
-      <div class="games__name">Game</div>
-    </div>
-    <div class="games__item">
-      <div
-        class="games__image"
-        style="background-image: url('images/game-example.jpg')"
-      ></div>
-      <div class="games__name">Game</div>
-    </div>
-    <div class="games__item">
-      <div
-        class="games__image"
-        style="background-image: url('images/game-example.jpg')"
-      ></div>
-      <div class="games__name">Game</div>
-    </div>
-    <div class="games__item">
-      <div
-        class="games__image"
-        style="background-image: url('images/game-example.jpg')"
-      ></div>
-      <div class="games__name">Game</div>
-    </div>
-    <div class="games__item">
-      <div
-        class="games__image"
-        style="background-image: url('images/game-example.jpg')"
-      ></div>
-      <div class="games__name">Game</div>
+  <div class="games__slider swiper">
+    <div class="swiper-wrapper games__list">
+      <div class="swiper-slide games__item">
+        <div
+          class="games__image"
+          style="background-image: url('images/game-example.jpg')"
+        ></div>
+        <div class="games__name">Game</div>
+      </div>
+      <div class="swiper-slide games__item">
+        <div
+          class="games__image"
+          style="background-image: url('images/game-example.jpg')"
+        ></div>
+        <div class="games__name">Game</div>
+      </div>
+      <div class="swiper-slide games__item">
+        <div
+          class="games__image"
+          style="background-image: url('images/game-example.jpg')"
+        ></div>
+        <div class="games__name">Game</div>
+      </div>
+      <div class="swiper-slide games__item">
+        <div
+          class="games__image"
+          style="background-image: url('images/game-example.jpg')"
+        ></div>
+        <div class="games__name">Game</div>
+      </div>
+      <div class="swiper-slide games__item">
+        <div
+          class="games__image"
+          style="background-image: url('images/game-example.jpg')"
+        ></div>
+        <div class="games__name">Game</div>
+      </div>
+      <div class="swiper-slide games__item">
+        <div
+          class="games__image"
+          style="background-image: url('images/game-example.jpg')"
+        ></div>
+        <div class="games__name">Game</div>
+      </div>
+      <div class="swiper-slide games__item">
+        <div
+          class="games__image"
+          style="background-image: url('images/game-example.jpg')"
+        ></div>
+        <div class="games__name">Game</div>
+      </div>
     </div>
   </div>
   <div class="games__tab">
@@ -51,3 +60,32 @@
     </picture>
   </div>
 </div>
+
+<script>
+  let gamesSlider = null;
+
+  function initGamesSlider() {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth > 767 && gamesSlider === null) {
+      gamesSlider = new Swiper(".games__slider", {
+        slidesPerView: "auto",
+        spaceBetween: 12,
+        loop: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        speed: 800,
+        grabCursor: true,
+      });
+    } else if (screenWidth <= 767 && gamesSlider !== null) {
+      gamesSlider.destroy(true, true);
+      gamesSlider = null;
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", initGamesSlider);
+
+  window.addEventListener("resize", initGamesSlider);
+</script>
