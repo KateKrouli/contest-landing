@@ -37,6 +37,7 @@ footer {
             display: flex;
             align-items: stretch;
             gap: 12px;
+            width: 100%;
 
             @media (max-width: 767px) { 
                 flex-direction: column;
@@ -49,6 +50,7 @@ footer {
             border-radius: 24px;
             padding: 24px;
             background: var(--semantic-brand-800);
+            flex: 1;
 
             @media (max-width: 767px) { 
                 padding: 16px;

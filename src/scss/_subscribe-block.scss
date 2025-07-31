@@ -51,14 +51,16 @@
 
     &__image {
         position: absolute;
-        top: -10px;
+        top: -5%;
         right: 7%;
+        height: 110%;
 
         @media (max-width: 767px) { 
             position: relative;
             margin: 0 auto;
             top: auto;
             right: auto;
+            height: auto;
         } 
     }
 }
