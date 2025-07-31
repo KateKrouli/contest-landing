@@ -8,8 +8,6 @@
     overflow: hidden;
 
     @media (max-width: 767px) { 
-        width: calc(100% - 16px);
-        margin: 0 auto;
         flex-direction: column;
         padding: 16px;
         gap: 24px;

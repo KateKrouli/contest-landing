@@ -23,6 +23,7 @@
         height: 576px;
         justify-content: flex-end; 
         border-radius: 0;
+        padding: 8px;
 
     }
 
@@ -111,9 +112,9 @@
         .btn {
             box-shadow: none;
             border-radius: 16px;
-
+            width: 50%;
              @media (max-width: 767px) { 
-                width: 50%;
+             
                 height: 48px;
              }
         }

@@ -2,6 +2,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    gap: 16px;
     padding-top: 140px;
     padding-bottom: 60px;
     color: var(--semantic-neutral-0);
@@ -16,8 +17,14 @@
     &__info {
         display: flex;
         flex-direction: column;
+        width: 60%;
         max-width: 500px;
         gap: 20px;
+
+        @media (max-width: 767px) {
+            width: 100%;
+            max-width: 100%;
+        }
     }
 
     &__title {
@@ -43,7 +50,6 @@
     &__list {
         display: flex;
         flex-direction: column;
-        gap: 24px;
         width: 100%;
         max-width: 590px;
 
@@ -57,7 +63,7 @@
         border-top: 1px solid var(--semantic-brand-700);
 
         summary {
-            padding: 24px;
+            padding: 24px 60px 24px 24px;
             font-size: 24px;
             line-height: 133%;
             color: var(--semantic-neutral-0);
@@ -66,7 +72,7 @@
             list-style: none;
 
              @media (max-width: 767px) { 
-                padding: 24px 16px;
+                padding: 24px 50px 24px 8px;
                 font-size: 18px;
                 line-height: 156%;
              }
@@ -105,7 +111,7 @@
             transition: max-height 0.4s cubic-bezier(.4,0,.2,1), opacity 0.3s;
             
             @media (max-width: 767px) { 
-                    padding: 0 16px 24px;
+                    padding: 0 8px 24px;
                     font-size: 16px;
                     line-height: 150%;
                 }
