@@ -2042,14 +2042,14 @@ header .header__mobile-btn {
 }
 @media (max-width: 767px) {
   .main-block .copied-notification {
-    top: 110%;
+    top: 105%;
     left: 50%;
     transform: translate(-50%);
   }
 }
 .main-block .copied-notification.hide {
   opacity: 0;
-  transform: translateX(-50%) translateY(20px);
+  transform: translateY(20px);
 }
 .main-block__rooles-link {
   font-size: 16px;

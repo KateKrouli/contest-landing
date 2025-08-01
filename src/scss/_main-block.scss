@@ -178,7 +178,7 @@
         color: var(--semantic-success-700, #15803D);
 
         @media (max-width: 767px) { 
-            top: 110%;
+            top: 105%;
             left: 50%;
             transform: translate(-50%);
         }
@@ -187,7 +187,7 @@
       
       .copied-notification.hide {
         opacity: 0;
-        transform: translateX(-50%) translateY(20px);
+        transform: translateY(20px);
       }
 
     &__rooles-link {
