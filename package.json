@@ -10,7 +10,7 @@
     "copy:images": "mkdir -p dist/images && cp -r src/images/* dist/images/",
     "copy:components": "cp -r src/components dist/components",
     "build": "esbuild src/js/main.js --bundle --outfile=dist/main.js && esbuild src/js/lang.js --bundle --outfile=dist/lang.js && npx posthtml src/index.html -o dist/index.html && cp -r src/scss dist/scss && npm run copy:images && npm run copy:components",
-    "dev": "npm-run-all --parallel watch:scss watch:js watch:lang watch:html serve copy:images copy:components"
+    "dev": "npm-run-all --parallel watch:scss watch:js watch:lang watch:html serve copy:images"
   },
   "devDependencies": {
     "chokidar": "^3.5.3",
