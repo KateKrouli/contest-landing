@@ -1,13 +1,14 @@
 .games {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    gap: 32px;
+    padding-top: 96px;
+    padding-bottom: 128px;
 
     @media (max-width: 767px) { 
-        gap: 20px;
-        padding-bottom: 60px;
+        gap: 24px;
+        padding-top: 64px;
+        padding-bottom: 64px;
     }
 
     &__title {
@@ -16,6 +17,7 @@
         line-height: 125%;
         letter-spacing: -0.04em;
         color: var(--semantic-neutral-0);
+        margin-bottom: 16px;
 
         @media (max-width: 767px) { 
             font-size: 30px;
@@ -35,7 +37,7 @@
     }
 
     &__item {
-        width: 192px !important;
+        width: 189px !important;
         border-radius: 12px;
         overflow: hidden;
 

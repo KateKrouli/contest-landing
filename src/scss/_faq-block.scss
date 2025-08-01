@@ -3,16 +3,16 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: 16px;
-    padding-top: 140px;
-    padding-bottom: 60px;
+    padding-top: 128px;
+    padding-bottom: 48px;
     color: var(--semantic-neutral-0);
 
     @media (max-width: 767px) {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 60px;
+        padding-bottom: 16px;
         flex-direction: column;
         align-items: center;
-    }
+    } 
 
     &__info {
         display: flex;
