@@ -2021,6 +2021,36 @@ header .header__mobile-btn {
   opacity: 1;
   visibility: visible;
 }
+.main-block .copied-notification {
+  display: flex;
+  padding: 0 20px 0 40px;
+  align-items: center;
+  border-radius: 16px;
+  height: 28px;
+  background: url(images/badge.png) var(--semantic-success-50) left center no-repeat;
+  position: absolute;
+  left: 110%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  transition: opacity 1s ease, transform 1s ease;
+  z-index: 9999;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--semantic-success-700, #15803D);
+}
+@media (max-width: 767px) {
+  .main-block .copied-notification {
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+.main-block .copied-notification.hide {
+  opacity: 0;
+  transform: translateX(-50%) translateY(20px);
+}
 .main-block__rooles-link {
   font-size: 16px;
   line-height: 150%;

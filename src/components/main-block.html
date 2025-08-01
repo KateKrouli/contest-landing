@@ -53,22 +53,46 @@
 </div>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    // Находим все блоки с промокодами
     document.querySelectorAll(".promocode").forEach((promo) => {
       promo.addEventListener("click", () => {
         const codeEl = promo.querySelector(".promocode__code");
         if (!codeEl) return;
 
-        // Добавляем класс visible
         codeEl.classList.add("visible");
-
-        // Копируем текст в буфер
         const codeText = codeEl.textContent.trim();
+
         navigator.clipboard
           .writeText(codeText)
-          .then(() => console.log(`Скопировано: ${codeText}`))
-          .catch((err) => console.error("Ошибка копирования:", err));
+          .then(() => {
+            const container = promo.closest(".main-block__promo");
+            if (container) {
+              showCopiedNotification(
+                container,
+                `Promosyon kodunuz kopyalandı!`
+              );
+            }
+          })
+          .catch((err) => {
+            console.error("Error", err);
+          });
       });
     });
+
+    function showCopiedNotification(container, message) {
+      const existing = container.querySelector(".copied-notification");
+      if (existing) existing.remove();
+
+      const notification = document.createElement("div");
+      notification.className = "copied-notification";
+      notification.textContent = message;
+      container.appendChild(notification);
+
+      setTimeout(() => {
+        notification.classList.add("hide");
+        notification.addEventListener("transitionend", () => {
+          notification.remove();
+        });
+      }, 3000);
+    }
   });
 </script>
